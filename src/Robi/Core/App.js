@@ -1,3 +1,5 @@
+import { GetLocal } from '../Actions/GetLocal.js'
+
 // @START-File
 let appSettings = {};
 let appLists;
@@ -41,6 +43,13 @@ const App = {
         // Set default route
         if (!defaultRoute) {
             settings.defaultRoute = routes.filter(r => !r.hide).map(route => route.path)[0];
+        }
+
+        // Set theme
+        const localTheme = GetLocal(`${settings.name}-theme`);
+        
+        if (localTheme) {
+            settings.theme = localTheme;
         }
 
         // Set all

@@ -333,13 +333,13 @@ export function Modal(param) {
             //     });
             // });
 
-            /** Close listener */
+            // Close listener
             $(component.get()).on('hidden.bs.modal', function (e) {
                 component.remove();
             });
 
             if (title) {
-                /** Scroll listener */
+                // Scroll listener
                 component.find('.modal-body').addEventListener('scroll', event => {
                     if (event.target.scrollTop > 0) {
                         event.target.style.borderTop = `solid 1px ${App.get('sidebarBorderColor')}`;

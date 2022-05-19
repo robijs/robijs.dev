@@ -32,12 +32,11 @@ Start({
                 path: 'General'
             }
         ],
-        theme: /* @START-theme */'Gray'/* @END-theme */,
+        theme: /* @START-theme */'Purple'/* @END-theme */,
         title: /* @START-title */'Title'/* @END-title */,
         appcontainer: null,
         maincontainer: null,
         sidebar: null,
-        usersList: 'Users'
         // @END-SETTINGS
     }
 });
