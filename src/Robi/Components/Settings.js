@@ -2,7 +2,6 @@ import { ChangeTheme } from './ChangeTheme.js'
 import { Container } from './Container.js'
 import { Preferences } from './Preferences.js'
 import { ReleaseNotesContainer } from './ReleaseNotesContainer.js'
-import { RequestAssitanceInfo } from './RequestAssitanceInfo.js'
 import { Route } from '../Actions/Route.js'
 import { SectionStepper } from './SectionStepper.js'
 import { Title } from './Title.js'
@@ -31,6 +30,10 @@ export async function Settings({ parent, pathParts, title }) {
         {
             name: 'Release Notes',
             path: 'ReleaseNotes'
+        },
+        {
+            name: 'Theme',
+            path: 'Theme'
         }
     ];
 
@@ -157,20 +160,7 @@ export async function Settings({ parent, pathParts, title }) {
     // Show section based on path
     switch (section) {
         case 'Help':
-            const requestAssistanceInfo = RequestAssitanceInfo({
-                data: [
-                    {
-                        label: 'For help with this app, please contact:',
-                        name: 'First Last',
-                        title: 'TItle, Branch',
-                        email: 'first.last.civ@mail.mil',
-                        phone: '(555) 555-5555'
-                    }
-                ],
-                parent: planContainer
-            });
-        
-            requestAssistanceInfo.add();
+            
             break;
         case 'Preferences':
             Preferences({

@@ -34,12 +34,8 @@ export async function ReleaseNotesContainer(param) {
     loadingIndicator.add();
 
     /** Get Items */
-    const releaseNotes = await Get({
-        list: 'ReleaseNotes',
-        select: 'Id,Summary,Description,MajorVersion,MinorVersion,PatchVersion,ReleaseType',
-        filter: `Status eq 'Published'`
-    });
-
+    const releaseNotes = []
+    
     if (releaseNotes?.length === 0) {
         const alertInfo = Alert({
             text: 'None',
