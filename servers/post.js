@@ -37,7 +37,7 @@ createServer((req, res) => {
                 const writableStream = createWriteStream(`./src/Lists/${file}/NewForm.js`);
                 writableStream.write(data);
 
-                console.log(`\nCreated '${file}' new form\n`);
+                console.log(`Created '${file}' new form`);
 
                 return;
             }
@@ -50,7 +50,7 @@ createServer((req, res) => {
                 const writableStream = createWriteStream(`./src/Lists/${file}/EditForm.js`);
                 writableStream.write(data);
 
-                console.log(`\nCreated '${file}' new form\n`);
+                console.log(`Created '${file}' new form`);
 
                 return;
             }
@@ -62,7 +62,7 @@ createServer((req, res) => {
             const writableStream = createWriteStream(`./${path}/${file}`);
             writableStream.write(data);
 
-            console.log(`\nSuccessfully wrote to -> ${path}/${file}\n`);
+            console.log(`Successfully wrote to -> ${path}/${file}`);
         });
 
         req.on("end", () => {
@@ -97,7 +97,7 @@ createServer((req, res) => {
             const writableStream = createWriteStream(`./src/Routes/${newName}/${newName}.js`);
             writableStream.write(data);
 
-            console.log(`Successfully updated route: ${oldName} -> ${newName} \n`);
+            console.log(`Successfully updated route: ${oldName} -> ${newName}`);
         });
 
         req.on("end", () => {

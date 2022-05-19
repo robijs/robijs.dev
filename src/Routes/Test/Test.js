@@ -6,12 +6,12 @@
 import { } from '../../Robi/Robi.js'
 import { Row } from '../../Robi/RobiUI.js'
 
-// @START-Route4
-export default async function Route({ parent }) {
+// @START-Test
+export default async function Test({ parent }) {
     // @START-Rows
     Row((parent) => {
     
     }, { parent });
     // @END-Rows
 }
-// @END-Route4
+// @END-Test
