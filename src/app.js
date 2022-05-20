@@ -17,6 +17,15 @@ Start({
     // Routes are directly addressable. Ex: https://site#path.
     routes: [
         // @START-Routes        
+        // @START-Route
+        {
+            path: 'Route',
+            title: 'Route',
+            icon: 'bs-arrow-left-cirlce-fill',
+            go: Route
+        }
+        // @END-Route
+        , // @Route        
         // @START-GettingStarted
         {
             path: 'GettingStarted',
@@ -43,15 +52,6 @@ Start({
             go: AnotherRoute2
         }
         // @END-AnotherRoute2
-        , // @Route        
-        // @START-Route
-        {
-            path: 'Route',
-            title: 'Route',
-            icon: 'bs-arrow-left-cirlce-fill',
-            go: Route
-        }
-        // @END-Route
         // @END-Routes
     ],
     settings: {

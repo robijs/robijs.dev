@@ -10,7 +10,9 @@ import { Row } from '../../Robi/RobiUI.js'
 export default async function Route({ parent }) {
     // @START-Rows
     Row((parent) => {
-    
+        parent.append(/*html*/ `
+            <div>Hello, world!</div>
+        `);
     }, { parent });
     // @END-Rows
 }

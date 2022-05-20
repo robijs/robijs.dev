@@ -61,7 +61,7 @@ export async function AddRoute(event) {
             // TODO: Prevent creating paths that already exist
             const routePath = SingleLineTextField({
                 label: 'Path',
-                addon: App.get('site') + '/App/src/pages/app.aspx#',
+                addon: App.isProd() ? App.get('site') + '/App/src/pages/app.aspx#' : App.get('site') + '/#' ,
                 parent: modalBody,
                 onKeydown(event) {
                     if (event.code === 'Space' || event.code === 'Tab') {
