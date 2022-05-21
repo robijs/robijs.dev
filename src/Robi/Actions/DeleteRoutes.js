@@ -26,7 +26,6 @@ export async function DeleteRoutes({ routes }) {
         });
     } else {
         request = await fetch(`http://127.0.0.1:8080/src/app.js`);
-        await Wait(1000);
     }
 
     let content = await request.text();
@@ -35,7 +34,7 @@ export async function DeleteRoutes({ routes }) {
     // Remove Imports
     const imports = content.match(/\/\/ @START-Imports:Routes([\s\S]*?)\/\/ @END-Imports:Routes/);
     const importObjects = imports[1].split('\n');
-    const remainingImports= importObjects.filter(route => {
+    const remainingImports = importObjects.filter(route => {
         const name = route.split(' ')[1];
 
         if (!routes.includes(name)) {
@@ -47,26 +46,26 @@ export async function DeleteRoutes({ routes }) {
     updated = content.replace(/\/\/ @START-Imports:Routes([\s\S]*?)\/\/ @END-Imports:Routes/, `// @START-Imports:Routes\n${remainingImports || '\n'}\n// @END-Imports:Routes`);
 
     const allRoutes = content.match(/\/\/ @START-Routes([\s\S]*?)\/\/ @END-Routes/);
-    const routeObjects = allRoutes[1].split(', // @ROUTE');
+    const routeObjects = allRoutes[1].split(', // @Route');
 
     // Remove routes
     const remainingRoutes = routeObjects.filter(route => {
         const [ query, path ] = route.match(/path: '([\s\S]*?)',/);
 
-        console.log(routes, path);
+        // console.log(routes, path);
 
         if (!routes.includes(path)) {
             return route;
         }
 
-    }).join(', // @ROUTE');
+    }).join(', // @Route');
 
     updated = updated.replace(/\/\/ @START-Routes([\s\S]*?)\/\/ @END-Routes/, `// @START-Routes${remainingRoutes || '\n        '}// @END-Routes`);
 
-    console.log('OLD\n----------------------------------------\n', content);
-    console.log('\n****************************************');
-    console.log('NEW\n----------------------------------------\n', updated);
-    console.log('\n****************************************');
+    // console.log('OLD\n----------------------------------------\n', content);
+    // console.log('\n****************************************');
+    // console.log('NEW\n----------------------------------------\n', updated);
+    // console.log('\n****************************************');
 
     let setFile;
 
