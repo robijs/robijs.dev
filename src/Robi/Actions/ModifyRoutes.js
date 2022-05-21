@@ -237,7 +237,6 @@ export async function ModifyRoutes(event) {
                             }
                         }
 
-                        await Wait(1000);
                         location.reload();
                     }
                     // @END-Dev
@@ -261,7 +260,6 @@ export async function ModifyRoutes(event) {
                             });
                         } else {
                             request = await fetch(`http://127.0.0.1:8080/src/app.js`);
-                            await Wait(1000);
                         }
 
                         let content = await request.text();
@@ -344,7 +342,6 @@ export async function ModifyRoutes(event) {
                                 method: 'POST',
                                 body: updated
                             });
-                            await Wait(1000);
                         }
                         // @END-Dev
 
@@ -393,7 +390,6 @@ export async function ModifyRoutes(event) {
                                         method: 'POST',
                                         body: updated
                                     });
-                                    await Wait(1000);
                                 }
                             } else {
                                 console.log('Title not changed');
@@ -457,8 +453,6 @@ export async function ModifyRoutes(event) {
                         if (App.isDev()) {
                             // 1. If title has changed, update file.
                             const request = await fetch(`http://127.0.0.1:8080/src/Routes/${name}/${name}.js`);
-                            await Wait(1000);
-                
                             const value = await request.text();
 
                             // Hold changes;
@@ -483,8 +477,6 @@ export async function ModifyRoutes(event) {
                                 method: 'PUT',
                                 body: updated
                             });
-
-                            await Wait(1000);
 
                             return;
                         }

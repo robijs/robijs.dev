@@ -7,9 +7,6 @@ import { Start } from './Robi/Robi.js'
 
 // @START-Imports:Routes
 import GettingStarted from './Routes/GettingStarted/GettingStarted.js'
-import Test from './Routes/Test/Test.js'
-import AnotherRoute2 from './Routes/AnotherRoute2/AnotherRoute2.js'
-import Route from './Routes/Route/Route.js'
 // @END-Imports:Routes
 
 // @START
@@ -17,41 +14,14 @@ Start({
     // Routes are directly addressable. Ex: https://site#path.
     routes: [
         // @START-Routes        
-        // @START-Route
-        {
-            path: 'Route',
-            title: 'Route',
-            icon: 'bs-arrow-left-cirlce-fill',
-            go: Route
-        }
-        // @END-Route
-        , // @Route        
         // @START-GettingStarted
         {
             path: 'GettingStarted',
             title: 'Getting Started',
-            icon: 'bs-activity',
+            icon: 'bs-check-circle-fill',
             go: GettingStarted
         }
         // @END-GettingStarted
-        , // @Route        
-        // @START-Test
-        {
-            path: 'Test',
-            title: 'Test',
-            icon: 'bs-app',
-            go: Test
-        }
-        // @END-Test
-        , // @Route        
-        // @START-AnotherRoute2
-        {
-            path: 'AnotherRoute2',
-            title: 'Another Route 2',
-            icon: 'bs-arrow-down-circle-fill',
-            go: AnotherRoute2
-        }
-        // @END-AnotherRoute2
         // @END-Routes
     ],
     settings: {
