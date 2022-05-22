@@ -60,8 +60,8 @@ export function Sidebar({ parent, path }) {
                     ${
                         (() => {
                             const initialWidth = window.innerWidth;
-                            
-                            return initialWidth >= 1305 ? /*html*/ `
+
+                            return initialWidth >= App.get('autoCollapseWidth') ? /*html*/ `
                                 <h3 class='title'>${App.get('title')}</h3>
                             ` : /*html*/ `
                                 <h3 class='placeholder' style='opacity: 0;'>${App.get('title')[0]}</h3>
@@ -511,7 +511,7 @@ export function Sidebar({ parent, path }) {
             // Window resize event
             const mode = component.get().dataset.mode;
 
-            if (window.innerWidth <= 1305) {
+            if (window.innerWidth <= App.get('autoCollapseWidth')) {
                 closeSidebar(mode);
             } else {
                 openSidebar(mode);
@@ -520,7 +520,7 @@ export function Sidebar({ parent, path }) {
             window.addEventListener('resize', event => {
                 const mode = component.get().dataset.mode;
 
-                if (window.innerWidth <= 1305) {
+                if (window.innerWidth <= App.get('autoCollapseWidth')) {
                     closeSidebar(mode);
                 } else {
                     openSidebar(mode);

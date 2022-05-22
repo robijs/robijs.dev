@@ -18,13 +18,14 @@ Start({
         {
             path: 'GettingStarted',
             title: 'Getting Started',
-            icon: 'bs-check-circle-fill',
+            icon: 'bs-arrow-right-circle-fill',
             go: GettingStarted
         }
         // @END-GettingStarted
         // @END-Routes
     ],
     settings: {
+        // @START-Settings
         name: /* @START-name */'Robi.js'/* @END-name */,
         questionTypes: [
             {
@@ -37,7 +38,8 @@ Start({
         appcontainer: null,
         maincontainer: null,
         sidebar: null,
-        // @END-SETTINGS
+        autoCollapseWidth: 1285
+        // @END-Settings
     }
 });
 // @END
