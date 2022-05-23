@@ -46,7 +46,8 @@
     "build-dev": "node ./scripts/build-dev.js",
     "build-sp": "node ./scripts/build-sp.js",
     "mkc": "node ./scripts/create-component.js",
-    "create-route": "node ./scripts/create-route.js",
+    "new-route": "node ./scripts/create-route.js",
+    "new-action": "node ./scripts/new-action.js",
     "watch-robi": "npm-watch build",
     "watch-robi-dev": "npm-watch build-dev"
   },
@@ -61,6 +62,7 @@
     "fs-extra": "^10.0.0",
     "http-auth": "^4.1.9",
     "json-server": "^0.16.3",
+    "marked": "^4.0.16",
     "morgan": "^1.10.0",
     "npm-watch": "^0.11.0",
     "object-assign": "^4.1.1",

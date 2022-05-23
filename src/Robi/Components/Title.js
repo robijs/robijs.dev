@@ -1,5 +1,4 @@
 import { Component } from '../Actions/Component.js'
-import { App } from '../Core/App.js';
 
 // @START-File
 /**
@@ -16,7 +15,6 @@ export function Title(param) {
         subTitleColor,
         breadcrumb,
         dropdownGroups,
-        maxTextWidth,
         route,
         padding,
         margin,

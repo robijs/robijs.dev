@@ -47,6 +47,7 @@ import { GenerateUUID } from './Actions/GenerateUUID.js'
 import { Get } from './Actions/Get.js'
 import { GetADUsers } from './Actions/GetADUsers.js'
 import { GetAppSetting } from './Actions/GetAppSetting.js'
+import { GetArticle } from './Actions/GetArticle.js'
 import { GetAttachments } from './Actions/GetAttachments.js'
 import { GetByUri } from './Actions/GetByUri.js'
 import { GetCurrentUser } from './Actions/GetCurrentUser.js'
@@ -150,6 +151,7 @@ export {
     Get,
     GetADUsers,
     GetAppSetting,
+    GetArticle,
     GetAttachments,
     GetByUri,
     GetCurrentUser,
