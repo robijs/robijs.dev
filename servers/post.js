@@ -139,7 +139,7 @@ createServer((req, res) => {
     if (req.method === "GET") {
         res.writeHead(200, headers);
         res.end(/*html*/ `
-            <h1>Methods allowed:</h1>
+            <h1>Methods</h1>
             <ul>
                 <li>POST: http://127.0.0.1:2035/?path=[path/to/file]&file=[filename.ext]</li>
                 <li>DELETE:</li>
