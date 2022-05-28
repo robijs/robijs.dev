@@ -793,11 +793,12 @@ export function AppContainer() {
 
             article pre {
                 margin: 8px 0px;
+                background: var(--background);
+                padding: 8px 12px;
+                border-radius: 8px;
             }
 
             article code {
-                background: var(--button-background);
-                padding: 4px;
                 border-radius: 0px 8px;
             }
 
