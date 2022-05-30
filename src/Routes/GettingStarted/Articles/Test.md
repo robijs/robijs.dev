@@ -25,7 +25,8 @@ If you see error messages in the terminal session that's running the local devel
 #### Error
 ```console
 EPERM: operation not permitted, watch at FSEvent.FSWatcher._handle.onchange
-``` 
+```
+or
 ```console
 EPERM: operation not permitted, rename './src/Routes/OldRouteName' -> './src/Routes/NewRouteName'
 ```

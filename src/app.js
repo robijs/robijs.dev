@@ -7,6 +7,7 @@ import { Start } from './Robi/Robi.js'
 
 // @START-Imports:Routes
 import GettingStarted from './Routes/GettingStarted/GettingStarted.js'
+import Route_Articles from './Routes/Articles/Articles.js'
 // @END-Imports:Routes
 
 // @START
@@ -22,6 +23,15 @@ Start({
             go: GettingStarted
         }
         // @END-GettingStarted
+        , // @Route
+        // @START-Articles
+        {
+            path: 'Articles',
+            title: 'Articles',
+            icon: 'bs-journals',
+            go: Route_Articles
+        }
+        // @END-Articles
         // @END-Routes
     ],
     settings: {
