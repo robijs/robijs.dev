@@ -48,7 +48,7 @@ Start({
         appcontainer: null,
         maincontainer: null,
         sidebar: null,
-        autoCollapseWidth: 1285
+        autoCollapseWidth: 1260
         // @END-Settings
     }
 });

@@ -5,5 +5,5 @@
 ## Local Development
 ```console
 npm install
-npm run dev
+npm start
 ```
