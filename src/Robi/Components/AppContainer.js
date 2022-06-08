@@ -796,6 +796,7 @@ export function AppContainer() {
                 background: var(--background);
                 padding: 8px 12px;
                 border-radius: 8px;
+                color: var(--color);
             }
 
             article code {

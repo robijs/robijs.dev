@@ -6,7 +6,7 @@
 import { Start } from './Robi/Robi.js'
 
 // @START-Imports:Routes
-import GettingStarted from './Routes/GettingStarted/GettingStarted.js'
+import Route_GettingStarted from './Routes/GettingStarted/GettingStarted.js'
 import Route_Articles from './Routes/Articles/Articles.js'
 // @END-Imports:Routes
 
@@ -20,7 +20,7 @@ Start({
             path: 'GettingStarted',
             title: 'Getting Started',
             icon: 'bs-arrow-right-circle-fill',
-            go: GettingStarted
+            go: Route_GettingStarted
         }
         // @END-GettingStarted
         , // @Route
