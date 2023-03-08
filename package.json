@@ -1,76 +1,76 @@
 {
-  "name": "robijs.dev",
-  "version": "1.0.0",
-  "description": "Robi site.",
-  "keywords": [
-    "SharePoint",
-    "JavScript",
-    "framework",
-    "client-side"
-  ],
-  "author": "Stephen Matheis",
-  "license": "ISC",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/robijs/robijs.dev"
-  },
-  "type": "module",
-  "watch": {
-    "build": {
-      "patterns": [
-        "./src/Robi/Actions",
-        "./src/Robi/Components",
-        "./src/Robi/Core",
-        "./src/Robi/Models"
-      ],
-      "quiet": true,
-      "silent": true
+    "name": "robijs.dev",
+    "version": "1.0.0",
+    "description": "Robi site.",
+    "keywords": [
+        "SharePoint",
+        "JavScript",
+        "framework",
+        "client-side"
+    ],
+    "author": "Stephen Matheis",
+    "license": "ISC",
+    "main": "app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/robijs/robijs.dev"
     },
-    "build-dev": {
-      "patterns": [
-        "./src/Robi/Actions",
-        "./src/Robi/Components",
-        "./src/Robi/Core",
-        "./src/Robi/Models"
-      ],
-      "quiet": true,
-      "silent": true
+    "type": "module",
+    "watch": {
+        "build": {
+            "patterns": [
+                "./src/Robi/Actions",
+                "./src/Robi/Components",
+                "./src/Robi/Core",
+                "./src/Robi/Models"
+            ],
+            "quiet": true,
+            "silent": true
+        },
+        "build-dev": {
+            "patterns": [
+                "./src/Robi/Actions",
+                "./src/Robi/Components",
+                "./src/Robi/Core",
+                "./src/Robi/Models"
+            ],
+            "quiet": true,
+            "silent": true
+        }
+    },
+    "scripts": {
+        "start": "concurrently \"npm run build-dev\" \"node ./servers/post.js\" \"node ./servers/live-server.cjs --cors --watch=./src --ignore=./src/app.js --open=./src/index.html --quiet\"",
+        "prod": "concurrently \"node ./servers/live-server.cjs --cors --watch=./src --ignore=./src/Lists,./src/app.js,./src/Robi/Actions,./src/Robi/Components,./src/Robi/Core,./src/Robi/Models --open=./src/index.html --quiet\" \"npm run watch-robi\"",
+        "reset": "node ./scripts/reset.js",
+        "build": "node ./scripts/build.js",
+        "build-dev": "node ./scripts/build-dev.js",
+        "build-sp": "node ./scripts/build-sp.js",
+        "cleanup": "node ./scripts/cleanup.js",
+        "mkc": "node ./scripts/create-component.js",
+        "new-route": "node ./scripts/create-route.js",
+        "new-action": "node ./scripts/new-action.js",
+        "watch-robi": "npm-watch build",
+        "watch-robi-dev": "npm-watch build-dev"
+    },
+    "devDependencies": {
+        "chokidar": "^3.5.2",
+        "colors": "^1.4.0",
+        "concurrently": "^6.2.1",
+        "connect": "^3.7.0",
+        "cors": "^2.8.5",
+        "event-stream": "^4.0.1",
+        "faye-websocket": "^0.11.4",
+        "fs-extra": "^10.0.0",
+        "http-auth": "^4.1.9",
+        "json-server": "^0.16.3",
+        "marked": "^4.0.16",
+        "morgan": "^1.10.0",
+        "npm-watch": "^0.11.0",
+        "object-assign": "^4.1.1",
+        "open": "^8.4.0",
+        "prettier": "^2.6.2",
+        "proxy-middleware": "^0.15.0",
+        "send": "^0.17.2",
+        "serve-index": "^1.9.1"
     }
-  },
-  "scripts": {
-    "start": "concurrently \"npm run build-dev\" \"node ./servers/post.js\" \"node ./servers/live-server.cjs --cors --watch=./src --ignore=./src/app.js --open=./src/index.html --quiet\"",
-    "prod": "concurrently \"node ./servers/live-server.cjs --cors --watch=./src --ignore=./src/Lists,./src/app.js,./src/Robi/Actions,./src/Robi/Components,./src/Robi/Core,./src/Robi/Models --open=./src/index.html --quiet\" \"npm run watch-robi\"",
-    "reset": "node ./scripts/reset.js",
-    "build": "node ./scripts/build.js",
-    "build-dev": "node ./scripts/build-dev.js",
-    "build-sp": "node ./scripts/build-sp.js",
-    "cleanup": "node ./scripts/cleanup.js",
-    "mkc": "node ./scripts/create-component.js",
-    "new-route": "node ./scripts/create-route.js",
-    "new-action": "node ./scripts/new-action.js",
-    "watch-robi": "npm-watch build",
-    "watch-robi-dev": "npm-watch build-dev"
-  },
-  "devDependencies": {
-    "chokidar": "^3.5.2",
-    "colors": "^1.4.0",
-    "concurrently": "^6.2.1",
-    "connect": "^3.7.0",
-    "cors": "^2.8.5",
-    "event-stream": "^4.0.1",
-    "faye-websocket": "^0.11.4",
-    "fs-extra": "^10.0.0",
-    "http-auth": "^4.1.9",
-    "json-server": "^0.16.3",
-    "marked": "^4.0.16",
-    "morgan": "^1.10.0",
-    "npm-watch": "^0.11.0",
-    "object-assign": "^4.1.1",
-    "open": "^8.4.0",
-    "prettier": "^2.6.2",
-    "proxy-middleware": "^0.15.0",
-    "send": "^0.17.2",
-    "serve-index": "^1.9.1"
-  }
 }
