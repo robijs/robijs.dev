@@ -186,7 +186,7 @@ export function Sidebar({ parent, path }) {
                 font-size: 15px;
                 font-weight: 500;
                 padding: 10px 0px;
-                min-width: 200px;
+                min-width: 250px;
                 white-space: nowrap;
                 transition: width 300ms, min-width 300ms, opacity 400ms;
             }
