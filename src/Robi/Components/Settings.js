@@ -13,23 +13,15 @@ import { Title } from './Title.js'
  */
 export async function Settings({ parent, pathParts, title }) {
     title.remove();
-    
+
     // Routed selection, default to Account if none
-    const path = pathParts[1] || 'Help';
+    const path = pathParts[1] || 'Preferences';
 
     // All users see Account and Release Notes
     let sections = [
         {
-            name: 'Help',
-            path: 'Help'
-        },
-        {
             name: 'Preferences',
             path: 'Preferences'
-        },
-        {
-            name: 'Release Notes',
-            path: 'ReleaseNotes'
         },
         {
             name: 'Theme',
@@ -39,7 +31,7 @@ export async function Settings({ parent, pathParts, title }) {
 
     // Turn off view container default padding
     parent.paddingOff();
-        
+
     // Form Container
     const formContainer = Container({
         height: '100%',
@@ -159,19 +151,8 @@ export async function Settings({ parent, pathParts, title }) {
 
     // Show section based on path
     switch (section) {
-        case 'Help':
-            
-            break;
         case 'Preferences':
             Preferences({
-                parent: planContainer
-            });
-            break;
-        case 'Release Notes':
-            ReleaseNotesContainer({
-                title: '',
-                padding: '0px',
-                maring: '0px',
                 parent: planContainer
             });
             break;
