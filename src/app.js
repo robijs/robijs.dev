@@ -7,7 +7,6 @@ import { Start } from './Robi/Robi.js'
 
 // @START-Imports:Routes
 import Route_GettingStarted from './Routes/GettingStarted/GettingStarted.js'
-import Route_Articles from './Routes/Articles/Articles.js'
 // @END-Imports:Routes
 
 // @START
@@ -23,15 +22,6 @@ Start({
             go: Route_GettingStarted
         }
         // @END-GettingStarted
-        , // @Route
-        // @START-Articles
-        {
-            path: 'Articles',
-            title: 'Articles',
-            icon: 'bs-journals',
-            go: Route_Articles
-        }
-        // @END-Articles
         // @END-Routes
     ],
     settings: {
@@ -48,7 +38,7 @@ Start({
         appcontainer: null,
         maincontainer: null,
         sidebar: null,
-        autoCollapseWidth: 1260
+        autoCollapseWidth: 940
         // @END-Settings
     }
 });
