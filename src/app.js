@@ -7,7 +7,6 @@ import { Start } from './Robi/Robi.js'
 
 // @START-Imports:Routes
 import Route_GettingStarted from './Routes/GettingStarted/GettingStarted.js'
-import Route_AddARoute from './Routes/AddARoute/AddARoute.js'
 // @END-Imports:Routes
 
 // @START
@@ -23,15 +22,6 @@ Start({
             go: Route_GettingStarted
         }
         // @END-GettingStarted
-        , // @Route
-        // @START-AddARoute
-        {
-            path: 'AddARoute',
-            title: 'Add a Route',
-            icon: 'bs-plus-circle-fill',
-            go: Route_AddARoute
-        }
-        // @END-AddARoute
         // @END-Routes
     ],
     settings: {
