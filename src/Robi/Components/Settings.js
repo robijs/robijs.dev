@@ -1,7 +1,6 @@
 import { ChangeTheme } from './ChangeTheme.js'
 import { Container } from './Container.js'
 import { Preferences } from './Preferences.js'
-import { ReleaseNotesContainer } from './ReleaseNotesContainer.js'
 import { Route } from '../Actions/Route.js'
 import { SectionStepper } from './SectionStepper.js'
 import { Title } from './Title.js'
