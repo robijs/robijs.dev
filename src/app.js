@@ -6,7 +6,7 @@
 import { Start } from './Robi/Robi.js'
 
 // @START-Imports:Routes
-import Route_GettingStarted from './Routes/GettingStarted/GettingStarted.js'
+import Route_Stop from './Routes/Stop/Stop.js'
 // @END-Imports:Routes
 
 // @START
@@ -14,14 +14,14 @@ Start({
     // Routes are directly addressable. Ex: https://site#path.
     routes: [
         // @START-Routes        
-        // @START-GettingStarted
+        // @START-Stop
         {
-            path: 'GettingStarted',
-            title: 'Getting Started',
+            path: 'Stop',
+            title: "You, Stop What You're Doing",
             icon: 'bs-arrow-right-circle-fill',
-            go: Route_GettingStarted
+            go: Route_Stop
         }
-        // @END-GettingStarted
+        // @END-Stop
         // @END-Routes
     ],
     settings: {
