@@ -12,23 +12,25 @@ export default async function Stop({ parent }) {
     Row(async (parent) => {
         const component = /*html*/ `
             <div>
-                <strong>Look. </strong> My friend. Here's the thing. You shouldn't use Robi.js.
+                <strong>Robi.js</strong> is a framework for building client-side apps for SharePoint that didn't look like SharePoint.
             </div>
-            <br/>
+            <br />
+            <div>It's old and opinionated. I made it because I didn't know how else to build single-page apps for SharePoint 2013. I didn't know ASP or .NET. I couldn't use a view library for government clients. Some clients didn't have access to upload custom DLLs to the app server or SPFX apps to the App Catalogue.</div>
+            <br />
             <div>
-                <strong>No, this isn't reverse psychology.</strong> It's a fact. It's old, opinionated, and exists because I didn't know how else to build single-page apps for SharePoint 2013 at the time.
+                It's full of bugs. I wasn't concerned with performance. I tried to make something that appealed to end users, no-code developers, our hosting teams, and software engineers. I don't think it worked that well for anyone but me.
             </div>
-            <br/>
+            <br />
             <div>
-                <strong>Seriously.</strong> Don't use it.
-            <div>
-            <br/>
-            <div>
-                <strong>I'm still proud of it though.</strong> It solved a problem. I had fun building it.
+                I think Robi.js was a failure. It didn't have the impact I wanted it to. I had fun building it though. I made some pretty big and complicated apps with it that solved boring problems.
             </div>
-            <br/>
+            <br />
             <div>
-                <a href="https://github.com/robijs/robijs.dev">Check out the source</a> if you're curious.
+                Please just use <a href="https://react.dev/">React</a> or whatever view library or app framework your team is using.
+            </div>
+            <br />
+            <div>
+                <a href="https://github.com/robijs/robijs.dev">The repo</a> is still available for the curious.
             </div>
         `;
 

@@ -17,7 +17,7 @@ Start({
         // @START-Stop
         {
             path: 'Stop',
-            title: "You, Stop What You're Doing",
+            title: "Hey there",
             icon: 'bs-arrow-right-circle-fill',
             go: Route_Stop
         }
